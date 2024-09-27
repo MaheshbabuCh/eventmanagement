@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Speaker tiles">
+    <template if:true={speakers}>
+      <template for:each={speakers} for:item="speaker">
+        <c-speaker-tile key={speaker.Id} name={speaker.Name} email={speaker.Email__c} phone={speaker.Phone__c}
+          profile-url={speaker.Profile_URL__c} about-me={speaker.About_Me__c}></c-speaker-tile>
+      </template>
+    </template>
+    <template if:true={error}>
+      <p>Error loading speakers: {error}</p>
+    </template>
+  </lightning-card>
+</template>

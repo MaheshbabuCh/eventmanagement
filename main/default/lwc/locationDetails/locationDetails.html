@@ -1,0 +1,8 @@
+<template>
+  <lightning-card title="Location Details" icon-name="standard:location">
+    <lightning-record-view-form record-id={eventId} object-api-name="Event__c">
+      <lightning-output-field field-name="Location_Address_Book__c"></lightning-output-field>
+      <lightning-output-field field-name="Location_Verified__c"></lightning-output-field>
+    </lightning-record-view-form>
+  </lightning-card>
+</template>

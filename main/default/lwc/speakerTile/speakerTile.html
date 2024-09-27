@@ -1,0 +1,16 @@
+<template>
+  <lightning-card>
+    <div class="speaker-tile">
+      <strong>{name}</strong>
+      <p> &#x1F4E7; {email}</p>
+      <p>{phone}</p>
+      <template if:true={aboutMe}>
+        <div class="about-me" lwc:dom="manual"></div>
+      </template>
+      <template if:true={profileUrl}>
+        <p><a href={profileUrl} target="_blank">View Profile</a></p>
+      </template>
+
+    </div>
+  </lightning-card>
+</template>

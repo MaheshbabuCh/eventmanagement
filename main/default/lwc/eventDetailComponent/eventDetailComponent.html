@@ -1,0 +1,52 @@
+<!-- version 1 - working one -->
+<!-- <template>
+  <lightning-tabset class="slds-box" active-tab-value="event-details"> -->
+<!-- Event Details Tab -->
+<!-- <lightning-tab label="Event Details" value="event-details">
+      <c-event-details event-id={recordId}></c-event-details>
+    </lightning-tab> -->
+
+<!-- Speaker Details Tab -->
+<!-- <lightning-tab label="Speaker Details" value="speaker-details">
+      <c-speaker-details event-id={recordId}></c-speaker-details>
+      <lightning-button label="New Speaker" onclick={handleNewSpeaker} variant="brand"></lightning-button>
+    </lightning-tab> -->
+
+<!-- Location Details Tab -->
+<!-- <lightning-tab label="Location Details" value="location-details">
+      <c-location-details event-id={recordId}></c-location-details>
+    </lightning-tab> -->
+
+<!-- Attendees Details Tab -->
+<!-- <lightning-tab label="Attendees Details" value="attendees-details">
+      <c-attendees-details event-id={recordId}></c-attendees-details>
+      <lightning-button label="New Attendee" onclick={handleNewAttendee} variant="brand"></lightning-button>
+    </lightning-tab>
+  </lightning-tabset>
+</template> -->
+
+<template>
+  <lightning-tabset class="slds-box" active-tab-value="event-details">
+    <!-- Event Details Tab -->
+    <lightning-tab label="Event Details" value="event-details">
+      <c-event-details event-id={recordId}></c-event-details>
+    </lightning-tab>
+
+    <!-- Speaker Details Tab -->
+    <lightning-tab label="Speaker Details" value="speaker-details">
+      <c-speaker-details event-id={recordId}></c-speaker-details>
+      <lightning-button label="New Speaker" onclick={handleNewSpeaker} variant="brand"></lightning-button>
+    </lightning-tab>
+
+    <!-- Location Details Tab -->
+    <lightning-tab label="Location Details" value="location-details">
+      <c-location-details event-id={recordId}></c-location-details>
+    </lightning-tab>
+
+    <!-- Attendees Details Tab -->
+    <lightning-tab label="Attendees Details" value="attendees-details">
+      <c-attendees-details event-id={recordId}></c-attendees-details>
+      <lightning-button label="New Attendee" onclick={handleNewAttendee} variant="brand"></lightning-button>
+    </lightning-tab>
+  </lightning-tabset>
+</template>

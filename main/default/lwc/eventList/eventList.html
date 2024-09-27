@@ -1,0 +1,68 @@
+<!-- Version 1 -->
+<!-- <template>
+  <lightning-card title="Event List" icon-name="standard:event">
+    <lightning-datatable key-field="Id" data={events} columns={columns} onsort={updateColumnSorting}
+      sorted-by={sortedBy} sorted-direction={sortedDirection} hide-checkbox-column="true" onrowaction={handleRowAction}>
+    </lightning-datatable>
+  </lightning-card>
+</template> -->
+
+
+<!-- <template>
+  <lightning-card title="Event List" icon-name="standard:event">
+    <div class="slds-grid slds-gutters">
+      <lightning-input label="Search by Name" value={searchName} onchange={handleSearchNameChange}>
+      </lightning-input>
+      <lightning-input label="Search by Start Date" type="date" value={searchStartDate}
+        onchange={handleSearchStartDateChange}>
+      </lightning-input>
+      <lightning-input label="Search by Location" value={searchLocation} onchange={handleSearchLocationChange}>
+      </lightning-input>
+    </div>
+    <lightning-datatable key-field="Id" data={filteredEvents} columns={columns} onsort={updateColumnSorting}
+      sorted-by={sortedBy} sorted-direction={sortedDirection} hide-checkbox-column="true" onrowaction={handleRowAction}>
+    </lightning-datatable>
+  </lightning-card>
+</template> -->
+
+<!-- Version 2 with search component with padding issues -->
+
+<!-- <template>
+  <lightning-card title="Event List" icon-name="standard:event">
+    <div class="slds-grid slds-gutters">
+      <lightning-input label="Search by Name" value={searchName} onchange={handleSearchNameChange}>
+      </lightning-input>
+      <lightning-input label="Search by Start Date" type="date" value={searchStartDate}
+        onchange={handleSearchStartDateChange}>
+      </lightning-input>
+      <lightning-input label="Search by Location" value={searchLocation} onchange={handleSearchLocationChange}>
+      </lightning-input>
+    </div>
+    <lightning-datatable key-field="Id" data={filteredEvents} columns={columns} onsort={updateColumnSorting}
+      sorted-by={sortedBy} sorted-direction={sortedDirection} hide-checkbox-column="true" onrowaction={handleRowAction}>
+    </lightning-datatable>
+  </lightning-card>
+</template> -->
+
+<!-- Version 3 with search component without padding issues -->
+
+<template>
+  <lightning-card class="search-input" title="Event List Component - Milestone 11" icon-name="standard:event">
+  </lightning-card>
+  <div class="search-container">
+    <lightning-input class="search-input" type="text" label="Search by Name" onchange={handleSearchNameChange}>
+    </lightning-input>
+
+    <lightning-input class="search-input" type="date" label="Search by Start Date"
+      onchange={handleSearchStartDateChange}>
+    </lightning-input>
+
+    <lightning-input class="search-input" type="text" label="Search by Location" onchange={handleSearchLocationChange}>
+    </lightning-input>
+
+    <button class="search-button" onclick={filterEvents}>Search</button>
+  </div>
+
+  <lightning-datatable key-field="id" data={filteredEvents} columns={columns} hide-checkbox-column="true">
+  </lightning-datatable>
+</template>

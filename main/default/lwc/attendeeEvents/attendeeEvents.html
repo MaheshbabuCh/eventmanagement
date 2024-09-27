@@ -1,0 +1,43 @@
+<template>
+  <lightning-card title="Attendee's Events">
+    <lightning-accordion allow-multiple-sections-open>
+      <!-- Section for Upcoming Events -->
+      <lightning-accordion-section name="upcomingEvents" label="Upcoming Events">
+        <template if:true={hasUpcomingEvents}>
+          <template for:each={upcomingEvents} for:item="event">
+            <div key={event.Id}>
+              <p><strong>Event Name:</strong> {event.Name}</p>
+              <p><strong>Start Date:</strong> {event.Start_Date__c}</p>
+              <p><strong>End Date:</strong> {event.End_Date__c}</p>
+              <!-- <p><strong>Speaker:</strong> {event.Speaker__r.Name}</p> -->
+              <p><strong>Location:</strong> {event.Location_Address_Book__r.Name}</p>
+            </div>
+
+          </template>
+        </template>
+        <template if:false={hasUpcomingEvents}>
+          <p>No upcoming events for this attendee.</p>
+        </template>
+      </lightning-accordion-section>
+
+      <!-- Section for Past Events -->
+      <lightning-accordion-section name="pastEvents" label="Past Events">
+        <template if:true={hasPastEvents}>
+          <template for:each={pastEvents} for:item="event">
+            <div key={event.Id}>
+              <p><strong>Event Name:</strong> {event.Name}</p>
+              <p><strong>Start Date:</strong> {event.Start_Date__c}</p>
+              <p><strong>End Date:</strong> {event.End_Date__c}</p>
+              <p><strong>Speaker:</strong> {event.Speaker__r.Name}</p>
+              <p><strong>Location:</strong> {event.Location_Address_Book__r.Name}</p>
+            </div>
+
+          </template>
+        </template>
+        <template if:false={hasPastEvents}>
+          <p>No past events for this attendee.</p>
+        </template>
+      </lightning-accordion-section>
+    </lightning-accordion>
+  </lightning-card>
+</template>

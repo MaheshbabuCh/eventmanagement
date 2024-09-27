@@ -1,0 +1,27 @@
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    padding: 8px;  /* Adjust padding as needed */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;  /* Adjust width as needed */
+}
+
+.search-button {
+    padding: 8px 16px;  /* Adjust padding as needed */
+    background-color: #0070d2;  /* Salesforce blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-button:hover {
+    background-color: #005fb2;  /* Darker blue on hover */
+}
